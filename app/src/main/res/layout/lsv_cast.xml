@@ -1,0 +1,45 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+
+        <variable
+            name="model"
+            type="com.devashish.trendingmovies.model.CastModel" />
+
+    </data>
+
+
+    <RelativeLayout
+        android:layout_width="130dp"
+        android:layout_height="150dp"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            app:riv_corner_radius="12dp"
+            app:setURLImage="@{model.profilePath}" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/rubik_regular"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text="@{model.name}"
+            android:textColor="@color/colorSkeletonText"
+            android:textSize="12sp" />
+
+
+    </RelativeLayout>
+
+
+</layout>
